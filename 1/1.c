@@ -29,7 +29,6 @@ double bisection(int p, int q, double (*func)(int, int, double))
                 b = b;
                 xp = (a + b) / 2;
                 c = func(p, q , xp);
-                //printf("%.4f\n", xp);
             }
             else
             {
@@ -37,7 +36,6 @@ double bisection(int p, int q, double (*func)(int, int, double))
                 b = xp;
                 xp = (a + b) / 2;
                 c = func(p, q , xp);
-                //printf("%.4f\n", xp);
             }
         }
     return xp;
