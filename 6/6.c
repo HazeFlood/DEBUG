@@ -1,59 +1,63 @@
 #include <stdio.h>
 #include <string.h>
-#include <math.h>
 
 int main() 
 {
-    int r = 0;
-    int w = 0;
-    int x = 0;
-    char plus[2] = "+";
-    char minus[2] = "-";
-    char oprator[2] = "@";
-    char rr[2] = "r";
-    char ww[2] = "w";
-    char xx[2] = "x";
+    int  r = 0, w = 0, x = 0;
+    char sign[3];
+    char temp[3];
     
-    char input;
-    
-    while (scanf("%c", &input) != EOF) {
-    	
-        char str[2] = "\0";
-        str[0] = input;
-        
-        if (strcmp(str, rr) == 0) {
-            if (strcmp(oprator, plus)) {
-                r = 1;
-            } else if (strcmp(oprator, minus)) {
-                r = 0;
-            } else {
-                r = 1;
-            }
-        } else if (strcmp(str, ww) == 0) {
-            if (strcmp(oprator, plus)) {
-                w = 1;
-            } else if (strcmp(oprator, minus)) {
-                w = 0;
-            } else {
-                w = 1;
-            }
-        } else if (strcmp(str, xx) == 0) {
-            if (strcmp(oprator, plus)) {
-                x = 1;
-            }else if (strcmp(oprator, minus)) {
-                x = 0;
-            }else{
-                x = 1;
-            }
-        } else if (strcmp(str, plus) == 0) {
-            oprator[0] = '+';
-        } else if (strcmp(str, minus) == 0) {
-            oprator[0] = '-';
+    scanf("%s", sign);
+    int l;
+    l = strlen(sign);
+    for (int i = 0; i < l; i++) {
+        if (sign[i] == 'r') {
+            r = 1;
+        }
+        if (sign[i] == 'w') {
+            w = 1;
+        }
+        if (sign[i] == 'x') {
+            x = 1;
         }
     }
     
-    int output = x * pow(2,0) + w * pow(2,1) + r * pow(2,2);
-    printf("%d", output);
-    
+    while ( scanf("%s", temp) != EOF) {
+        if (strcmp(temp,"+x") == 0) {
+            x++;
+        }
+		if (strcmp(temp,"-x") == 0) {
+            x--;
+        }
+		if (strcmp(temp,"+r") == 0) {
+            r++;
+        } 
+        if (strcmp(temp,"-r") == 0) {
+            r--;
+        } 
+		if (strcmp(temp,"+w") == 0) {
+            w++;
+        } 
+		if (strcmp(temp,"-w") == 0) {
+            w--;
+        }
+    } 
+    if (r >= 1) {
+    	r = 1;
+	} else {
+		r = 0;
+	}
+	if (w >= 1) {
+    	w = 1;
+	} else {
+		w = 0;
+	}
+	if (x >= 1) {
+    	x = 1;
+	} else {
+		x = 0;
+	}
+    printf("%d", r * 4 + w * 2 + x);
+
     return 0;
 }
