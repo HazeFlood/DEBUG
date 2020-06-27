@@ -1,39 +1,26 @@
-
 #include <stdio.h>
 #include <string.h>
 
-int main() {
-    char arr[32];
-    char str[32];
+int main() 
+{
+    char arr[33];
+    char str[500];
+    char result[33];
+    int j, i;
     int bits[32];
-    char result[32];
-    
-    scanf("%s", &arr[32]);
-    char input;
-    int j = 0;
-    
-    for(int i = 0; i < 32; i++){
-        arr[i] = '0';
+
+    scanf("%s", str);
+    for (i = 0; i <= 32; i++)
+        arr[i] = 0;
+    j = strlen(str);
+    for (i = 1; i <=j; i++)
+        arr[i % 32] += (int)str[i - 1];
+
+    for (j = 0; j < 32; j++) {
+        bits[j] = arr[31 - j] ^ (arr[j] << 1);
+        result[j + 1] = (char)(bits[j] % 85 + 34);
     }
-    
-    while (scanf("%c", &input) != EOF) {
-        if (input == '\n'){
-            break;
-        }else if(j >= 32){
-            break;
-        }
-        arr[j % 32] = arr[j % 32] + (int)(input);
-        j++;
-    }
-   
-    for (int i = 0; i < 32; i++) {
-        bits[i] = (arr[31 - i]) ^ (arr[i] << 1);
-        int b = (bits[i] % 85) + 34;
-        result[i] = (char)b;
-    }
-    
-    for (int i = 0; i < 32; i++) {
-        printf("%c",result[i]);
-    }
+    for (j = 1; j < 33; j++)
+        printf("%c", result[j]);
     return 0;
 }

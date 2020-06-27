@@ -31,9 +31,9 @@ int main()
         	}
 		}
 		if (reqrmt[0] == '+') {
-            current = current | req;
-        } else {
-            current = current & (req);
+            current = current + req;
+        } else if (reqrmt[0] == '-' ) {
+            current = current - req;
         }
     }
     printf("%d\n", current);
