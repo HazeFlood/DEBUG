@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+
 #define EPSILON 1e-7
 
 double bisection(int p, int q, double (*func)(int, int, double));
@@ -9,8 +10,10 @@ int main()
 {
     int p;
     int q;
+
     scanf("%d%d", &p, &q);
     printf("%.4f\n", bisection(p, q, f));
+
     return 0;
 }
 
