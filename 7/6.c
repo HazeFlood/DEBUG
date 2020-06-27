@@ -4,7 +4,7 @@ int main ()
 {	
     int year, month, day;
 
-    scanf("%d%-%d-%d", &year, &month, &day);    
+    scanf("%d-%d-%d", &year, &month, &day);    
  
     if ((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && (day >= 1 && day <=31)) {
         printf("YES");
