@@ -3,18 +3,18 @@
 
 int main() 
 {
-	int matrix_a[10][10];
-	int matrix_b[10][10];
-	int matrix_c[10][10];
-	int m;
-	int n;
+    int matrix_a[10][10];
+    int matrix_b[10][10];
+    int matrix_c[10][10];
+    int m;
+    int n;
 	int i, j, k;/* Main loop parameters */
 	
 	/* Product Matrix initialization */
 	for (i = 0; i < 10; i++) {
-		for (k = 0; k < 10; k++) {
-			matrix_c[i][k] = 0;
-		}
+	    for (k = 0; k < 10; k++) {
+                matrix_c[i][k] = 0;
+	    }
 	}
 	
 	/* input m,n */
@@ -22,20 +22,20 @@ int main()
 	
 	/* input Matrix */
 	for (i = 0; i < m; i++) {
-		for (k = 0; k < n; k++) {
-			scanf("%d", &matrix_a[i][k]);
-		}	
+	    for (k = 0; k < n; k++) {
+		scanf("%d", &matrix_a[i][k]);
+		}
 	}
 			
 	for (k = 0; k < n; k++) {
-		for (i = 0; i < m; i++) {
-			scanf("%d", &matrix_b[k][i]);
-		}
+	    for (i = 0; i < m; i++) {
+		scanf("%d", &matrix_b[k][i]);
+	    }
 	}
 	
 	/* matrix multiplication */
 	for (i = 0; i < m; i++) {
-		for (j = 0; j < m; j++) {
+	    for (j = 0; j < m; j++) {
 			for (k = 0; k < n; k++) {
 				matrix_c[i][j] += (matrix_a[i][k] * matrix_b[k][j]);
 			}
@@ -43,19 +43,19 @@ int main()
 	}
 	
 	for (i = 0; i < m; i++) {
-			for (k = 0; k < m; k++) {
-				printf("%d", matrix_c[i][k]);
-				if (k < m - 1 ) {
-					printf(" ");
-				}
-				if (i == m - 1) {
-					continue;
-				}
-				if (k == m - 1) {
-					printf("\n");
-				}
+		for (k = 0; k < m; k++) {
+			printf("%d", matrix_c[i][k]);
+			if (k < m - 1 ) {
+				printf(" ");
+			}
+			if (i == m - 1) {
+				continue;
+			}
+			if (k == m - 1) {
+				printf("\n");
 			}
 		}
+	}
 		
 	return 0;
 }

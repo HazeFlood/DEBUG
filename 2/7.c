@@ -4,9 +4,9 @@ int main(void)
 {
 	
     int mtxA[10][10];
-	int mtxB[10][10];
-	int mtxC[10][10];
-	int m, n; 
+    int mtxB[10][10];
+    int mtxC[10][10];
+    int m, n; 
     int i, j, k;
     
     for (i = 0; i < 10; i++) {
@@ -43,5 +43,6 @@ int main(void)
         }
         printf("\n");
     }
+
     return 0;
 }

@@ -18,7 +18,7 @@ int main()
         }
     }
     for (i = 0; i < n; i++) {
-        for (j = 0; j < 2; j++) {
+        for (j = 0; j < m; j++) {
             scanf("%d", &matrix_b[i][j]);
         }
     }
@@ -41,7 +41,7 @@ int main()
     for (i = 0; i < m; i++) {
         for (j = 0; j < m; j++){ 
             printf("%d", result[i][j]);
-            if (j != 1) {
+            if (j != m - 1) {
                 printf(" ");
             }        
         }
