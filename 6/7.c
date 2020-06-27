@@ -1,70 +1,44 @@
 #include <stdio.h>
-
-void add (char);
-void Delete (char);
-
-int rwx = 0;
+#include <string.h>
 
 int main() 
 {
-    /*initiation*/
-    char temp;
-    scanf("%c", &temp);
+    int  i = 0;
+    int  counter = 0;
+	char temp[100][3];
+    char name[3];
     
-    if (temp == 'x') {
-	    rwx ^= (1 << 0);
-	} else if (temp == 'w') {
-        rwx ^= (1 << 1);
-        scanf("%c", &temp);
-        if (temp == 'x') {
-		    rwx ^= (1 << 0);
-		}
-    } else if (temp == 'r') {
-        rwx ^= (1 << 2);
-        scanf("%c", &temp);
-        if (temp == 'w') {
-		    rwx ^= (1 << 1);
-		}
-        scanf("%c", &temp);
-        if (temp == 'x') {
-		    rwx ^= (1 << 0);
-		}
+    while (scanf("%s", name) != EOF) {
+        strcpy(temp[i], name);
+        i++;
     }
+    for (int j = 0; j < 3; j++) {
+        if ((temp[0][j] == 'w')) {
+            counter += 2;
+    	} else if ((temp[0][j] == 'r')) {
+            counter += 4;
+    	} else if((temp[0][j] == 'x')) {
+            counter += 1;
+    	}
+    }
+    for (int a = 0; a < i; a++) {
+        if ((temp[a][0] == '+' && temp[a][1] == 'r')) {
+            counter += 4;
+        } else if ((temp[a][0] == '+' && temp[a][1] == 'w')) {
+            counter += 2;
+        } else if ((temp[a][0] == '+' && temp[a][1] == 'x')) {
+            counter += 1;
+        } else if ((temp[a][0] == '-' && temp[a][1] == 'r')) {
+            counter -= 4;
+        } else if ((temp[a][0] == '-' && temp[a][1] == 'w')) {
+            counter -= 2;
+        }else if((temp[a][0] == '-' && temp[a][1] == 'x')){
+            counter -= 1;
+        } 
+    }
+    printf("%d", counter);
     
-    /*modification*/
-    while (scanf("%c", &temp) != EOF) {
-        scanf("%c", &temp);
-        if (temp == '+') {
-            scanf("%c", &temp);
-            add(temp);
-        } else {
-            scanf("%c", &temp);
-            Delete(temp);
-        }
-    }
-    /*output*/
-    printf("%d", rwx);
     return 0;
 }
+	
 
-void add(char input) 
-{
-    if (input == 'r' && rwx / 4 != 1) {
-	    rwx ^= (1 << 2);
-	} else if (input == 'w' && (rwx / 2 % 2 != 1)) {
-	    rwx ^= (1 << 1);
-	} else if (rwx % 4 != 1) {
-	    rwx ^= (1 << 0);
-	}
-}
-
-void Delete(char input) 
-{
-    if (input == 'r' && rwx / 4 == 1) {
-	    rwx ^= (1 << 2);
-	} else if (input == 'w' && (rwx / 2 % 2 == 1)) {
-	    rwx ^= (1 << 1);
-	} else if (rwx % 4 == 1) {
-	    rwx ^= (1 << 0);
-	}
-}
