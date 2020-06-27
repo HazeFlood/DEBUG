@@ -13,7 +13,6 @@ int main()
     char rr[2] = "r";
     char ww[2] = "w";
     char xx[2] = "x";
-    
     char input;
     
     while (scanf("%c", &input) != EOF) {
