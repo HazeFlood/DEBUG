@@ -8,9 +8,9 @@ int main()
 	char m[21];
     
     for (i = 0; i < 10; i++) {
-        scanf("%s", &n[i]);
+        scanf("%s", n[i]);
 	}
-	
+	/* might wrong */
     for (i = 0; i < 10; i++) {
         for (k = i + 1; k < 10; k++)
         {
