@@ -1,58 +1,43 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() 
 {
-	
-    char n;
-    int a[3]={0,0,0};
+	char before[3];
+    char calculate[100][100];
+    int  i = 0;
+    int  count=0;
+    int  result=0;
     
-    for (int i=0;i<3;i++) {
-       scanf("%c", &n);
-        if (n == 'r') {
-            a[0]=1;
-        }
-        if (n == 'w') {
-            a[1]=1;
-        }
-        if (n == 'x') {
-            a[2]=1;
-        }
-        
+    scanf("%s", before);
+    while (scanf("%s",calculate[i]) != EOF) {
+        count++;
+        i++;
     }
-    
-    while (scanf("%c" , &n) !=EOF) {
-       if (n == '\n') {
-          continue;
-       }
-       
-       if (n=='+') {
-           scanf("%c" , &n);
-           if (n == 'r') {
-            a[0]=1;
-           }
-           if (n == 'w') { 
-            a[1]=1;
-           }
-           if (n == 'x') {
-            a[2]=1;
-           }  
-       } 
-        if (n=='-') {
-           scanf("%c" , &n);
-           if (n == 'r') {
-            a[0]=0;
-           }
-           if (n == 'w') {
-            a[1]=0;
-           }
-           if (n == 'x') {
-            a[2]=0;
-           }  
-       } 
+    for (i = 0; i < 3; i++) {
+        if(before[i]=='r') result+=4;
+        if(before[i]=='w') result+=2;
+        if(before[i]=='x') result+=1;
     }
-    
-    int o=a[0]*2*2+a[1]*2+a[2];
-    printf("%d",o);
+
+    for (i = 0; i < count; i++) {
+    	if (calculate[i][0] == '+') {
+            if(calculate[i][1] == 'r') 
+				result += 4;
+            if(calculate[i][1] == 'w') 
+				result += 2;
+            if(calculate[i][1] == 'x') 
+				result += 1;
+        } else if (calculate[i][0] == '-') {
+            if(calculate[i][1] == 'r') 
+				result -= 4;
+            if(calculate[i][1] == 'w') 
+				result -= 2;
+            if(calculate[i][1] == 'x')
+				result -= 1;
+        }    
+    }
+    printf("%d", result);
     
     return 0;
 }
