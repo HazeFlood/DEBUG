@@ -1,53 +1,62 @@
-#include <stdio.h>
-
 int main() 
 {
     int matrix[100][100];
-    int m;
-    int n;
+    int m, n;
+    int k = 0;
+    int l = 0;
+    int i, j;
+    int num;
     
     scanf("%d %d", &m, &n);
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
+    
+    for (i = 0; i < m; i++) {
+        for (j = 0; j < n; j++) {
             scanf("%d", &matrix[i][j]);
         }
     }
-    
-    int start = 0, column = n, row = m;
-    while(start < column && start < row) {
-        if (n == 1) {
-            for (int i = 0; i < m; i++) {
-                if (i == m - 1){
-                    printf("%d", matrix[i][0]);
-                } else {
-                	printf("%d ", matrix[i][0]);
-				}
-            }
-        } else  if (m == 1) {
-            for (int j = 0; j < n; j++) {
-                if (j == n - 1){
-                    printf("%d", matrix[0][j]);
-                } else {
-				    printf("%d ", matrix[0][j]);
-				} 
-            }
-        } else {
-    		for (int j = start; j < column; j++) {
-        		printf("%d ", matrix[start][j]);
-    		}
-    		for (int i = start + 1; i < row; i++) {
-       		 	printf("%d ", matrix[i][column-1]);
-    		}		
-    		for (int j = column-2; j >= start; j--) {
-       		 	printf("%d ", matrix[row-1][j]);
-   			}
-    		for (int i = row-2; i > start; i--) {
-        		printf("%d ", matrix[i][start]);
-   			}
+      
+    while (k < m && l < n) {
+        /* Print the first row from the remaining rows */
+        for (i = l; i < n; i++)
+        {
+            printf("%d ", matrix[k][i]);
+
         }
-    	start++;
-    	column--;
-    	row--;
+        k++;
+ 
+        /* Print the last column from the remaining columns */
+        for (i = k; i < m; i++)
+        {
+            printf("%d ", matrix[i][n - 1]);
+
+        }
+        n--;
+ 
+        /* Print the last row from the remaining rows */
+        if (k < m)
+        {
+            for (i = n - 1; i >= l; i--)
+            {
+                printf("%d ", matrix[m - 1][i]);
+ 
+            }
+            m--;
+        }
+ 
+        /* Print the first column from the remaining columns */
+        if (l < n)
+        {
+            for (i = m - 1; i >= k; i--)
+            {
+                printf("%d", matrix[i][l]);
+                if (i != k) {
+                    printf(" ");
+                }
+
+            }
+            l++;    
+        }   
+	printf(" ");     
     }
 
     return 0;
