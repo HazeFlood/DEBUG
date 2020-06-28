@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 
-int main() 
+int main()
 {
     int  r = 0, w = 0, x = 0;
     char sign[3];
     char temp[3];
-    
+
     scanf("%s", sign);
     int l;
     l = strlen(sign);
@@ -19,6 +19,7 @@ int main()
         }
         if (sign[i] == 'x') {
             x = 1;
+
         }
     }
     

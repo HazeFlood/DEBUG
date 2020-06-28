@@ -25,12 +25,13 @@ int main()
     int number = 0;
     
     for (i = 1; i < n; i++) {
-        if (max<strlen(names[i])) {
-            max=strlen(names[i]);
-            number=i;
+        if (max < strlen(names[i])) {
+            max = strlen(names[i]);
+            number = i;
         }
     }
     
     printf("%s\n", names[number]);   
+
     return 0;
 }

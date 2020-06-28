@@ -6,6 +6,7 @@ int main()
     int l = 0;
     int i, j;
     int num;
+    int cou = 0;
     
     scanf("%d %d", &m, &n);
     
@@ -19,15 +20,22 @@ int main()
         /* Print the first row from the remaining rows */
         for (i = l; i < n; i++)
         {
-            printf("%d ", matrix[k][i]);
-
+            printf("%d", matrix[k][i]);
+			cou++;
+			if (cou != m * n) {
+				printf(" ");
+			}
         }
         k++;
  
         /* Print the last column from the remaining columns */
         for (i = k; i < m; i++)
         {
-            printf("%d ", matrix[i][n - 1]);
+            printf("%d", matrix[i][n - 1]);
+			cou++;
+            if (cou != m * n) {
+                printf(" ");
+            }
 
         }
         n--;
@@ -37,8 +45,11 @@ int main()
         {
             for (i = n - 1; i >= l; i--)
             {
-                printf("%d ", matrix[m - 1][i]);
- 
+                printf("%d", matrix[m - 1][i]);
+				cou++;
+	            if (cou != m * n) {
+		            printf(" ");
+			    }
             }
             m--;
         }
@@ -49,10 +60,10 @@ int main()
             for (i = m - 1; i >= k; i--)
             {
                 printf("%d", matrix[i][l]);
-                if (i != k) {
-                    printf(" ");
-                }
-
+				cou++;
+	            if (cou != m * n) {
+		            printf(" ");
+			    }
             }
             l++;    
         }   
