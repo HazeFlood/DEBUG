@@ -1,4 +1,7 @@
-indent_style = space
-indent_size = 4
+# top-most EditorConfig file
+root = true
+
+# all files
+[*]
 indent_style = tab
-tab_width = 4
+indent_size = 4
