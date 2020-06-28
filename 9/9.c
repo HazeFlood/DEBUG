@@ -3,8 +3,10 @@
 int main() 
 {
     int n;
+	int a[51];
+	
     scanf("%d", &n);
-    int a[51];
+
     a[2] = 1;
     a[3] = 1;
     a[1] = 0;
