@@ -5,7 +5,7 @@ int main()
 {
     int  i, k;
     char n[11][21];
-	char m[21];
+    char m[21];
     
     for (i = 0; i < 10; i++) {
         scanf("%s", n[i]);
