@@ -1,36 +1,42 @@
 #include <stdio.h>
 #include <string.h>
+ 
+void swap(char *a,char *b) 
+{
+    char temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
 
-int main() {
-    char names[10][21];
-    char name[21];
-    char temp[21];
-    int  i, j;
+int main() 
+{
+	int  i;
+    int  j;
+    int  k;
+    int  length;
+    char name[10][21];
+    char temp;
+    int  m;
     
-    for (i = 0; i < 10; i++) {
-        memset(name, 0, 21);
-        scanf("%s", name);
-        for (j = 0; j < strlen(name); j++) {
-            names[i][j] = name[j];
-            }
+    for (i = 0;i < 10;i++) {
+        scanf("%s",name[i]);
     }
-    
-    for (i = 0; i < 10; i++) {
-        for (j = 0; j < 9 - i; j++) {
-            if (strcmp(names[j], names[j + 1]) > 0) {
-                strcpy(temp, names[j]);
-                strcpy(names[j], names[j + 1]);
-                strcpy(names[j + 1], temp);
+    for (j = 0;j < 10;j++) {
+        for (k = 0;k < 9 - j;k++) {
+            if (strcmp(name[k],name[k + 1]) > 0) {
+                for (length = 0;length < 20;length++) {  
+                	swap(&name[k][length],&name[k + 1][length]);   
+                }
             }
         }
     }
+    for (m = 0;m < 10;m++) {
+        printf("%s ",name[m]);
+        if (m != 9) {
+            printf(" \n");
+        }
+    } 
     
-    for(i = 0; i < 10; i++) {
-        printf("%s", names[i]);
-        if (i != 9) {
-            printf("\n");
-        } 
-    }
-
     return 0;
 }
