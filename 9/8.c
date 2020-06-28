@@ -3,10 +3,11 @@
 int main() 
 {
     int n;
+    int i;
+
     scanf("%d", &n);
     
     int part[50];
-    int i;
     
     part[2] = 1;
     part[3] = 1;
@@ -15,15 +16,13 @@ int main()
     
     if (n <= 4) {
     	printf("%d", part[n]);
-		return 0;
-	}
+        return 0;
+    }
 	
     for (i = 5; i < n; i++) {
         part[i] = part[i - 2] + part[i - 3];
     }
-    
     printf("%d", part[n - 2] + part[n - 3]);
-    
     
     return 0;
 }

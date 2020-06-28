@@ -13,13 +13,13 @@ int main()
     a[4] = 1;
     
     if (N < 5) {
-    	printf("%d", a[N]);
+        printf("%d", a[N]);
     }
 	
     for (i = 5; i <= N; i++) {
         a[i] = a[i - 2] + a[i - 3];
     }
-    
     printf("%d", a[N]);
+
     return 0;
 }
