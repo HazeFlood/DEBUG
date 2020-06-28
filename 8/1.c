@@ -5,7 +5,7 @@ int main()
 {
     int n;
     
-    scanf("%d\n", &n);
+    scanf("%d", &n);
     getchar();
     
     char names[n][101];
