@@ -15,26 +15,38 @@ int main()
         i++;
     }
     for (i = 0; i < 3; i++) {
-        if(before[i]=='r') result+=4;
-        if(before[i]=='w') result+=2;
-        if(before[i]=='x') result+=1;
+        if(before[i] == 'r') {
+			result += 4;
+		}
+        if(before[i] == 'w')  {
+			result += 2;
+		}
+        if(before[i] == 'x')  {
+			result += 1;
+		}
     }
 
     for (i = 0; i < count; i++) {
     	if (calculate[i][0] == '+') {
-            if(calculate[i][1] == 'r') 
+            if(calculate[i][1] == 'r') {
 				result += 4;
-            if(calculate[i][1] == 'w') 
+			}
+            if(calculate[i][1] == 'w') {
 				result += 2;
-            if(calculate[i][1] == 'x') 
+			}
+            if(calculate[i][1] == 'x'){
 				result += 1;
+			}
         } else if (calculate[i][0] == '-') {
-            if(calculate[i][1] == 'r') 
+            if(calculate[i][1] == 'r') {
 				result -= 4;
-            if(calculate[i][1] == 'w') 
+			}
+            if(calculate[i][1] == 'w') {
 				result -= 2;
-            if(calculate[i][1] == 'x')
+			}
+            if(calculate[i][1] == 'x') {
 				result -= 1;
+			}
         }    
     }
     printf("%d", result);
