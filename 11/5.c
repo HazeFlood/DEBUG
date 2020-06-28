@@ -10,7 +10,7 @@ int main()
     char input;
     int  j = 0;
     
-    scanf("%s", &str);
+    scanf("%s", str);
     for(int i = 0; i < 32; i++){
         arr[i] = 0;
     }
