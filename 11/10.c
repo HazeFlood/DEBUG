@@ -26,5 +26,6 @@ int main()
     for (i = 0; i <= 32; i++) {
         printf("%c", rstr[i]);
     }
+
     return 0;
 }
