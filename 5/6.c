@@ -9,8 +9,8 @@ int main()
     
     for (i = 0; i < 10; i++) {
         scanf("%s", n[i]);
-	}
-	/* might wrong */
+    }
+    /* might wrong */
     for (i = 0; i < 10; i++) {
         for (k = i + 1; k < 10; k++)
         {
@@ -20,7 +20,7 @@ int main()
                 strcpy(n[k], m);
             }
         }
-    printf("%s\n", n[i]); 
+        printf("%s\n", n[i]); 
     }
     
     return 0;

@@ -3,7 +3,7 @@
 
 int main() 
 {
-    int i,j;
+    int  i,j;
     char name[10][20]={0};
     
     for (i = 0; i < 10; i++) {
