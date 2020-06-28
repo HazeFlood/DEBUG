@@ -19,7 +19,7 @@ int main()
                 strcpy(n[k], m);
             }
         }
-    printf("%s\n", n[i]); 
+        printf("%s\n", n[i]); 
     }
     
     return 0;

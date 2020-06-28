@@ -3,11 +3,11 @@
 
 int main() 
 {
-    char in[500];
-    char out[33];
-    int  k, i, j;
+    char  in[500];
+    char  out[33];
+    int   k, i, j;
     char  arr[33];
-    int  bits[32];
+    int   bits[32];
     
     scanf("%s", in);
     k = strlen(in);
