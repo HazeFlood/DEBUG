@@ -6,9 +6,9 @@ int main()
     int  r = 0, w = 0, x = 0;
     char sign[3];
     char temp[3];
+    int  l;
 
     scanf("%s", sign);
-    int l;
     l = strlen(sign);
     for (int i = 0; i < l; i++) {
         if (sign[i] == 'r') {
@@ -19,7 +19,6 @@ int main()
         }
         if (sign[i] == 'x') {
             x = 1;
-
         }
     }
     

@@ -3,13 +3,12 @@
 
 int main() 
 {
-    int n;
-    
-    scanf("%d", &n);
-    
-    char name[100][101];
+    int  n;
+	char name[100][101];
     char largest[101];
     int  i, j;
+    
+    scanf("%d", &n);
         
     while (scanf("%c", &name[i][j]) != EOF) {
         for (i = 0; i < n; i++) {
@@ -28,8 +27,7 @@ int main()
 		    strcpy(largest, name[i]);
 		}
 	}
-	
     printf("%s", largest);
-    
+	
     return 0;
 }

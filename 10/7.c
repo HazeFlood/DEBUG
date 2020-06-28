@@ -5,6 +5,7 @@ int main()
     int a;
     int i;
     int j;
+	
     scanf("%d", &a);
     
     if (a == 2) {

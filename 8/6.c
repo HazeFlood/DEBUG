@@ -5,6 +5,7 @@ int main()
 {
     int n;
     int i, j;
+
     scanf("%d", &n);
     char names[n][101];
     char temp[101];
@@ -30,7 +31,6 @@ int main()
             number = i;
         }
     }
-    
     printf("%s\n", names[number]);   
 
     return 0;
