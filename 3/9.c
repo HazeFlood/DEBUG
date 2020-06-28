@@ -35,68 +35,68 @@ int main()
     }
     if (times <= m * n) {
         for (i = 0; i < 6; i++) {
-        if (orientation % 4 == 0) {  /* right */ 
-            while (matrix_pass[mIndex][nIndex] == 0 && nIndex <= l - 1) {
-                printf("%d", matrix[mIndex][nIndex]);
-                matrix_pass[mIndex][nIndex] = 1;
-                nIndex ++ ;
-                times ++ ;
-                if (times != m * n) {
-                    printf(" ");
-                }
-            }
+        	if (orientation % 4 == 0) {  /* right */ 
+            	while (matrix_pass[mIndex][nIndex] == 0 && nIndex <= l - 1) {
+               		printf("%d", matrix[mIndex][nIndex]);
+                	matrix_pass[mIndex][nIndex] = 1;
+                	nIndex ++ ;
+                	times ++ ;
+                	if (times != m * n) {
+                 	   printf(" ");
+                	}
+            	}
             orientation ++ ;
             mIndex ++ ;
             nIndex -- ;  
-        }
+        	}
         
-        if (orientation % 4 == 1) {  /* down */ 
-            while (matrix_pass[mIndex][nIndex] == 0 && mIndex <= k - 1) {
-                printf("%d", matrix[mIndex][nIndex]);
-                matrix_pass[mIndex][nIndex] = 1;
-                mIndex ++ ;
-                times ++ ;
-                if (times != m * n) {
-                    printf(" ");
-                }
-            }
-            orientation ++ ;
-            mIndex -- ;
-            nIndex -- ;
-        }
+        	if (orientation % 4 == 1) {  /* down */ 
+            	while (matrix_pass[mIndex][nIndex] == 0 && mIndex <= k - 1) {
+                	printf("%d", matrix[mIndex][nIndex]);
+                	matrix_pass[mIndex][nIndex] = 1;
+                	mIndex ++ ;
+                	times ++ ;
+                	if (times != m * n) {
+                    	printf(" ");
+                	}
+            	}
+            	orientation ++ ;
+            	mIndex -- ;
+            	nIndex -- ;
+        	}
         
-        if (orientation % 4 == 2) {  /* left */ 
-            while (matrix_pass[mIndex][nIndex] == 0 && nIndex >= p) {
-                printf("%d", matrix[mIndex][nIndex]);
-                matrix_pass[mIndex][nIndex] = 1;
-                nIndex -- ;
-                times ++ ;
-                if (times != m * n) {
-                    printf(" ");
-                }
-            }
-            orientation ++ ;
-            mIndex -- ;
-            nIndex ++ ;  
-        }
+        	if (orientation % 4 == 2) {  /* left */ 
+            	while (matrix_pass[mIndex][nIndex] == 0 && nIndex >= p) {
+                	printf("%d", matrix[mIndex][nIndex]);
+                	matrix_pass[mIndex][nIndex] = 1;
+                	nIndex -- ;
+                	times ++ ;
+                	if (times != m * n) {
+                 	   printf(" ");
+                	}
+            	}
+           	 	orientation ++ ;
+            	mIndex -- ;
+            	nIndex ++ ;  
+        	}
         
-        if (orientation % 4 == 3) {  /* up */ 
-            while (matrix_pass[mIndex][nIndex] == 0 && mIndex >= p + 1){
-                printf("%d", matrix[mIndex][nIndex]);
-                matrix_pass[mIndex][nIndex] = 1;
-                mIndex--;
-                times++;
-                if (times != m * n) {
-                    printf(" ");
-                }
-            }
-            orientation ++ ;
-            mIndex ++ ;
-            nIndex ++ ;  
-        }
-        k -- ;
-        l -- ;
-        p ++ ;
+        	if (orientation % 4 == 3) {  /* up */ 
+            	while (matrix_pass[mIndex][nIndex] == 0 && mIndex >= p + 1){
+                	printf("%d", matrix[mIndex][nIndex]);
+                	matrix_pass[mIndex][nIndex] = 1;
+                	mIndex--;
+                	times++;
+                	if (times != m * n) {
+                    	printf(" ");
+                	}
+            	}
+            	orientation ++ ;
+            	mIndex ++ ;
+            	nIndex ++ ;  
+        	}
+        	k -- ;
+        	l -- ;
+        	p ++ ;
         }
     }
     
