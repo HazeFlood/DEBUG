@@ -14,22 +14,22 @@ int main(int argc, char *argv[])
 	
 	/* input */
 	while (scanf("%s", temp) != EOF) {
-			strcpy(permission[i], temp);
-			i++;
-		}
+        strcpy(permission[i], temp);
+		i++;
+	}
 		
 	row = i + 1;
 	
 	/* First row statistics */
 	for (i = 0; i < 3; i++) {
 		if (permission[0][i] == 'r') {
-				chmod_r++;
+			chmod_r++;
 		}	
 		if (permission[0][i] == 'w') {
-				chmod_w++;
+			chmod_w++;
 		}
 		if (permission[0][i] == 'x') {
-				chmod_x++;
+			chmod_x++;
 		}
 	}
 	
@@ -37,28 +37,27 @@ int main(int argc, char *argv[])
 	for (i = 1; i < row; i++) {
 		if (permission[i][0] == '+') {
 			if (permission[i][1] == 'r') {
-					chmod_r++;
-				}	
+				chmod_r++;
+			}	
 			if (permission[i][1] == 'w') {
-					chmod_w++;
-				}
+				chmod_w++;
+			}
 			if (permission[i][1] == 'x') {
-					chmod_x++;
-				}
+				chmod_x++;
+			}
 		}
 		
 		if (permission[i][0] == '-') {
 			if (permission[i][1] == 'r') {
-					chmod_r--;
-				}	
+				chmod_r--;
+			}	
 			if (permission[i][1] == 'w') {
-					chmod_w--;
-				}
+				chmod_w--;
+			}
 			if (permission[i][1] == 'x') {
-					chmod_x--;
-				}
+				chmod_x--;
+			}
 		}
-		
 	}
 	
 		if (chmod_r > 0) {
