@@ -14,7 +14,7 @@ int main()
     
     if (N < 5) {
     	printf("%d", a[N]);
-	}
+    }
 	
     for (i = 5; i <= N; i++) {
         a[i] = a[i - 2] + a[i - 3];
