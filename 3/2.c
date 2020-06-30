@@ -5,10 +5,13 @@ int main()
     int matrix[100][100];
     int m;
     int n;
+
     scanf("%d %d", &m, &n);
+
     int k = m * n;
     int m0 = m;
     int n0 = n;
+
 	for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
             scanf("%d", &matrix[i][j]);
@@ -28,7 +31,9 @@ int main()
     	}
         return 0;
     }
+
     int i = 0;
+
     while(i != k) 
 	{
 		if (2 * n0 - n == 1 || 2 * m0 - m == 1) {
