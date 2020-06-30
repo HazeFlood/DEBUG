@@ -7,23 +7,24 @@ int main()
     int b;
     int c;
     
-    scanf("%d",&b);
+    scanf("%d", &b);
     if (b == 1) {
     	return 0;
     } else if (b == 2) {
     	int x = 2;
-    	printf("%d",x);
+    	printf("%d", x);
     } else if (b > 2) {
-    	for (a = 3;a <= b;a = a + 1)  {
+		printf("2\n");
+    	for (a = 3; a <= b; a = a + 1)  {
         	int count = 0;
-            for (c = 2;c < a;c = c + 1) {
+            for (c = 2; c < a; c = c + 1) {
 				if (a % c == 0) {
                     count = 1;
                     break;
                 } 
         	}
             if (count == 0){
-            	printf("%d\n",a);
+            	printf("%d\n", a);
 			}
     	}
 	}
