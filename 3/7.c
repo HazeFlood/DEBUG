@@ -30,10 +30,9 @@ int main()
                     count++;
                     if (j != endX) {
                         printf(" ");
-                    }
-			    
+                    }			    
 			}
-		break;
+		    break;
 		} else if (startX == endX) {
         	for(j=startY; j <= endY; j++) {
         		printf("%d", matrix[endX][j]);
@@ -71,7 +70,7 @@ int main()
                 	}
             	}
         	}
-        /*满足以下条件输出第四步*/
+            /*满足以下条件输出第四步*/
         	if (endX - 1 > startX && startY < endY) {
             	for (i = endX - 1; i >= startX + 1; i--) {
                 	printf("%d", matrix[i][startX]);

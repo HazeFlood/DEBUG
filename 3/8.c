@@ -15,7 +15,7 @@ int main()
 			scanf("%d",&matrix[i][j]);
 		}
 	}
-	max=m*n;
+	max = m*n;
 	
 	/*output the first line*/
 	for (j = 0; j < n; j++) {
@@ -52,6 +52,7 @@ int main()
 		}
 		
 		int t;
+
 		t = m;
 		m = n;
 		n = t-1;

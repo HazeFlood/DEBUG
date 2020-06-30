@@ -5,6 +5,7 @@ int main()
     int matrix[100][100];
     int m;
     int n;
+
     scanf("%d%d", &m, &n);
     
     for (int i = 0; i < m; i++) {
@@ -15,6 +16,7 @@ int main()
 
     int j;
     int count = 0;
+
     if (m == 1) {
         for (j = 0; j < n; j++) {
             printf("%d", matrix[0][j]);
@@ -78,5 +80,6 @@ int main()
             }
         }
     }
+
     return 0;
 }

@@ -4,6 +4,7 @@
 void swap(char *s1,char *s2)
 {
     char t[100];
+
     strcpy(t, s1);
     strcpy(s1, s2);
     strcpy(s2, t);

@@ -10,6 +10,7 @@ int main()
     int k;
     int j;
     int o;
+
   /* Reads a given number */
     for (i = 0; i < n; i++) {
         scanf("%d", &numbers[i]);

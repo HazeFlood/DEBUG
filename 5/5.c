@@ -36,6 +36,7 @@ int main()
 void swap (char *b, char *c) 
 {
     char temp;
+
     temp = *b;
     *b = *c;
     *c = temp;
