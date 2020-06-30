@@ -7,7 +7,7 @@ int main()
     int m;
     int a[10];
     int i;
-	int temp = 0; /*中间变量*/
+	int temp = 0; /*  */
 	
     for (i = 0; i < n; i++) {
         scanf("%d", &a[i]);

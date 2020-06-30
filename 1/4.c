@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+
 #define EPSILON 1e-7
 
 double bisection(int p, int q, double (*func)(int, int, double));
@@ -12,6 +13,7 @@ int main()
     
     scanf("%d%d", &p, &q);
     printf("%.4f\n", bisection(p, q, f));
+
     return 0;
 }
 
@@ -20,6 +22,7 @@ double bisection(int p, int q, double (*func)(int, int, double))
     double a;
 	double b;
 	double m;
+
 	a = -20.0;
 	b = 20.0;
 	m = (a + b) / 2;
@@ -36,6 +39,7 @@ double bisection(int p, int q, double (*func)(int, int, double))
 				m = (a + b) / 2;
 			}
 		}
+
 		return m;
 		
 	} else if ((f(p, q, m) < 0 && f(p, q, b) > 0) || (f(p, q, m) > 0 && f(p, q, b) < 0)) {
@@ -50,6 +54,7 @@ double bisection(int p, int q, double (*func)(int, int, double))
 		}
 		return m;
 	}
+
 	return 0;
 }
 

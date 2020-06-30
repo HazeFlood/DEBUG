@@ -8,6 +8,7 @@ int main()
     int i = 0;
     int max = 0;
     int inter = 0;
+
    /* Reads a given number */
     for (i = 0; i < n; i++) {
         scanf("%d", &numbers[i]);
@@ -19,8 +20,7 @@ int main()
             if (numbers[max] < numbers[m]) {
                 max = m;
             }
-        }
-        
+        }        
         inter = numbers[i];
         numbers[i] = numbers[max];
         numbers[max] = inter;

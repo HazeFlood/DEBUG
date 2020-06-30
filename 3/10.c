@@ -24,7 +24,7 @@ int main() {
 	}
 		
 	do{	
-		int matrix_[n][m];//rotate the matrix to -90 degree which becomes matrix_
+		int matrix_[n][m];
 
 		for (i = 0; i < n; i++) {
 			for (j = 0; j < m-1; j++) {
@@ -41,7 +41,7 @@ int main() {
 				printf(" ");
 		}
 	
-		//cover original matrix with new matrix_	
+		/* cover original matrix with new matrix_ */
 		for (i = 0; i < n; i++) {
 			for (j = 0; j < m; j++) {
 				matrix[i][j] = matrix_[i][j];
@@ -49,10 +49,10 @@ int main() {
 		}
 		
 		int t;
+
 		t = m;
 		m = n;
-		n = t-1;
-			
+		n = t-1;			
 	}while (m >= 1 && n >= 1);
 	
     return 0;

@@ -3,12 +3,11 @@
 
 int main(int argc, char *argv[]) 
 {	
-	int i = 0, row;
-	int chmod = 0;
-	int chmod_r = 0;
-	int chmod_w = 0;
-	int chmod_x = 0;
-	
+	int  i = 0, row;
+	int  chmod = 0;
+	int  chmod_r = 0;
+	int  chmod_w = 0;
+	int  chmod_x = 0;
 	char temp[3];
 	char permission[10][3];
 	
@@ -78,7 +77,15 @@ int main(int argc, char *argv[])
 			printf("6");
 		} else if (chmod == 101) {
 			printf("5");
-		}
+		} else if (chmod == 100) {
+            printf("4");
+        } else if (chmod == 10) {
+            printf("2");
+        } else if (chmod == 1) {
+            printf("1");
+        } else {
+            printf("0");
+        }
 
 	return 0;
 }

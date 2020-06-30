@@ -4,7 +4,7 @@ int main()
 {
     int matrix_a[100][100];
     int matrix_b[100][100];
-    int matrix_result[150][150];
+    int matrix_result[150][150] = {0};
     int m;
     int n;
     
@@ -27,11 +27,10 @@ int main()
     }
     
     for (mIndex = 0; mIndex < m; mIndex ++) {
-        for (nIndex = 0; nIndex < n; nIndex ++) {
-            for (j = 0; j < n + 1; j ++) {
+        for (nIndex = 0; nIndex < m; nIndex ++) {
+            for (j = 0; j < n; j ++) {
                 matrix_result[mIndex][nIndex] += matrix_a[mIndex][j] * matrix_b[j][nIndex];
-            }
-            
+            }            
         }
     }
     

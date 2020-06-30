@@ -16,6 +16,7 @@ int main()
     }
     
     int k, l;
+
     k = m;
     l = n;
     times  = 0;
@@ -95,6 +96,6 @@ int main()
         k--;
         l--;
         p++;
-       
+    }       
     return 0;
 }

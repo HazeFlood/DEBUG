@@ -36,29 +36,6 @@ int main()
 
     while(i != k) 
 	{
-		if (2 * n0 - n == 1 || 2 * m0 - m == 1) {
-			if (2 * n0 - n == 1 ) {
-				for(int j = m - m0; j <= m0 - 1; j++) {
-            		printf("%d", matrix[j][n0 - 1]);
-            		i++;
-                    if (i == k) {
-                       break;
-                    } else {
-                        printf(" ");
-                    }
-        		}
-			} else if (2 * m0 - m == 1) {
-				for (int j = n - n0; j <= n0 - 1; j++) {
-            		printf("%d", matrix[m - m0][j]);
-            		i++;
-                    if (i == k) {
-                        break;
-                    } else {
-                        printf(" ");
-                    }  
-				}
-			}
-		}
 		for(int j = n - n0; j < n0 - 1; j++) {
             printf("%d", matrix[m - m0][j]);
             i++;
