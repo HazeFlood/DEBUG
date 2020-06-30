@@ -21,7 +21,7 @@ int main()
 Node *circle_create(int n) 
 {
     Node *temp, *new_node, *head;
-    int i
+    int i;
 
     temp = (Node *) malloc(sizeof(Node));
     head = temp;
