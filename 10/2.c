@@ -11,6 +11,7 @@ int main()
    		int x = 2;
    		printf("%d",x);
    } else {
+	    printf("2\n");
         for (i = 3;i <= n;i = i+1)  {
         	int count = 0;
             for (j = 2;j < i;j = j + 1) {
